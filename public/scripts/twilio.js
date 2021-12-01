@@ -13,11 +13,10 @@ const user = {
   cost: '$20'
 }
 
-  const orderConfirmed = function (user) {
-
+  const orderConfirmed = function () {
     client.messages
       .create({
-        body: `Hello ${user.userName}, thank you for your order! The total is ${user.cost}.`,
+        body: `Hello, thank you for your order! You will receive an update closer to your pickup time.`,
         from: process.env.TWILIO_PHONE,
         to: process.env.TO_PHONE
       })
@@ -44,9 +43,5 @@ const user = {
     .then(message => console.log(message.sid));
   }
 
-
-  orderConfirmed(user);
-  timeConfirmed(5);
-  orderCompleted();
-
+  orderConfirmed();
   module.exports = { orderConfirmed, timeConfirmed, orderCompleted };

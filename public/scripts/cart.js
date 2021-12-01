@@ -32,7 +32,7 @@ function purchaseClicked() {
     while (cartItems.hasChildNodes()) {
         cartItems.removeChild(cartItems.firstChild)
     }
-    updateCartTotal()
+    updateCartTotal();
 }
 
 function removeCartItem(event) {
@@ -65,8 +65,8 @@ function addItemToCart(title, price, imageSrc) {
     let cartItems = document.getElementsByClassName('cart-items')[0]
     let cartItemNames = cartItems.getElementsByClassName('cart-item-title')
     for (let i = 0; i < cartItemNames.length; i++) {
-        if (cartItemNames[i].innerText == title) {
-            alert('This item is already added to the cart')
+        if (cartItemNames[i].innerText === title) {
+            alert('This item is already added to the cart');
             return
         }
     }
@@ -101,3 +101,4 @@ function updateCartTotal() {
     total = Math.round(total * 100) / 100
     document.getElementsByClassName('cart-total-price')[0].innerText = '$' + total
 }
+
