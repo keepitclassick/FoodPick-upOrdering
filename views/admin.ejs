@@ -13,12 +13,13 @@
     <script type="text/javascript" src="/scripts/cart.js" async></script>
     <script type="text/javascript" src="/vendor/jquery-3.0.0.js"></script>
     <script type="text/javascript" src="/scripts/app.js"></script>
+    <script type="text/javascript" src="/scripts/twilio.js"></script>
 
   </head>
     <title>Admin</title>
     <body>
       <header>
-        <a href="#home" class="logo"><i class="fas fa-utensils"></i>Sweet Treats Cupcakery</a>
+        <a href="/" class="logo"><i class="fas fa-utensils"></i>Sweet Treats Cupcakery</a>
 
         <div id="menu-bar" class="fas fa-bars"></div>
 
@@ -30,6 +31,8 @@
         </nav>
       </header>
 <!--Admin table-->
+<h1 class="heading">our<span> Menu </span></h1>
+
 <section>
   <!--Admin table-->
 
@@ -44,7 +47,7 @@
     </div>
     <div class="divTableBody">
     <div class="divTableRow">
-    <div class="divTableCell">orders.id</div>
+    <div class="divTableCell">getElementById</div>
     <div class="divTableCell">2 x pinata, 3 X peanut butter and jelly</div>
     <div class="divTableCell">+5193516748</div>
     <div class="divTableCell">$25.00</div>
@@ -69,7 +72,7 @@
     </div>
     </div>
     </div>
-    <button id ="confirm" class="btn btn-primary" onclick="orderConfirmed()">Confirm Order</button><button id ="complete" class="btn btn-primary">Order Complete</button>
+    <button id ="confirm" class="btn btn-primary" onclick="orderConfirmed">Confirm Order</button><button id ="complete" class="btn btn-primary">Order Complete</button>
     </body>
   </body>
 </html>
