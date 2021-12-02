@@ -22,7 +22,7 @@ module.exports = (db) => {
 
 
   //Get specific user by id
-  router.get("/", (req, res) => {
+  router.get("/:id", (req, res) => {
     const id = parseInt(req.params.id);
     db.query(`SELECT * FROM users WHERE id = $1`,[id])
       .then(data => {
