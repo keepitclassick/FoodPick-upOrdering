@@ -1,5 +1,10 @@
-// Client facing scripts here
+document.addEventListener('DOMContentLoaded', init, false);
 
-const confirm = document.getElementById('confirm.btn');
 
-confirm.addEventListener('click',alert("yo"));
+function init(){
+  function message () {
+    alert("Hello!");
+  }
+  let button = document.getElementById('confirm');
+  button.addEventListener('click', message, true);
+};
