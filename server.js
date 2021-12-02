@@ -40,12 +40,13 @@ const widgetsRoutes = require("./routes/widgets");
 const twilioRoutes = require("./routes/twilio");
 const adminRoutes = require("./routes/admin");
 
+
 // Mount all resource routes
 // Note: Feel free to replace the example routes below with your own
 app.use("/api/users", usersRoutes(db));
 app.use("/api/widgets", widgetsRoutes(db));
-app.use("/sms",   smsRoutes(db, iconsKey, PHONE_OWNER));
-app.use("/admin", adminRoutes(db));
+app.use("/admin", adminRoutes);
+
 // Note: mount other resources here, using the same pattern above
 
 // Home page
@@ -55,6 +56,7 @@ app.use("/admin", adminRoutes(db));
 app.get("/", (req, res) => {
   res.render("index");
 });
+
 
 app.listen(PORT, () => {
   console.log(`Server listening on port ${PORT}`);

@@ -21,6 +21,7 @@ const user = {
         to: process.env.TO_PHONE
       })
       .then(message => console.log(message.sid));
+      document.getElementById('confirm').addEventListener('click', orderConfirmed)
   }
 
   const timeConfirmed = function (time_est) {
@@ -42,6 +43,9 @@ const user = {
     })
     .then(message => console.log(message.sid));
   }
+
+
+
 
   orderConfirmed();
   module.exports = { orderConfirmed, timeConfirmed, orderCompleted };
