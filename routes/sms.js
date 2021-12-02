@@ -8,7 +8,7 @@ router.use(function(req, res, next) {
 });
 
 module.exports = (db) => {
-  router.post("/sms", (req, res) => {
+  router.post("/", (req, res) => {
     const twiml = new MessagingResponse();
     twiml.message('Your order is confirmed!');
     res.writeHead(200, { 'Content-Type': 'text/xml'});

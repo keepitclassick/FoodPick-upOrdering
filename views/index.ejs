@@ -15,6 +15,7 @@
     <script type="text/javascript" src="/scripts/cart.js" async></script>
     <script type="text/javascript" src="/vendor/jquery-3.0.0.js"></script>
     <script type="text/javascript" src="/scripts/app.js"></script>
+    <script type="text/javascript" src="/scripts/twilio.js"></script>
   </head>
 
   <body>
@@ -29,7 +30,7 @@
         <a href="#home">home</a>
         <a href="#gallery">menu</a>
         <a href="#order">order</a>
-        <a href="#">vendors</a>
+        <a href="#admin">vendors</a>
       </nav>
     </header>
 
@@ -177,7 +178,7 @@
 <section>
 <!--Admin table-->
 
-<div class="divTable blueTable">
+<div id="admin" class="divTable blueTable">
   <div class="divTableHeading">
   <div class="divTableRow">
   <div class="divTableHead">ORDER ID</div>
@@ -188,7 +189,7 @@
   </div>
   <div class="divTableBody">
   <div class="divTableRow">
-  <div class="divTableCell">01</div>
+  <div class="divTableCell">orders.id</div>
   <div class="divTableCell">2 x pinata, 3 X peanut butter and jelly</div>
   <div class="divTableCell">+5193516748</div>
   <div class="divTableCell">$25.00</div>
@@ -214,8 +215,7 @@
   </div>
   </div>
 
-  <button id ="confirm" class="btn btn-primary">Confirm Order</button><button id ="complete" class="btn btn-primary">Order Complete</button>
-
+  <button id ="confirm" class="btn btn-primary" onclick="orderConfirmed()">Confirm Order</button><button id ="complete" class="btn btn-primary">Order Complete</button>
   </body>
 
 </html>
