@@ -14,11 +14,21 @@
     <script type="text/javascript" src="/vendor/jquery-3.0.0.js"></script>
     <script type="text/javascript" src="/scripts/app.js"></script>
 
-    <%- include('./partials/_header') %>
   </head>
     <title>Admin</title>
     <body>
+      <header>
+        <a href="#home" class="logo"><i class="fas fa-utensils"></i>Sweet Treats Cupcakery</a>
 
+        <div id="menu-bar" class="fas fa-bars"></div>
+
+        <nav class="navbar">
+          <a href="/">home</a>
+          <a href="/#menu">menu</a>
+          <a href="/#order">order</a>
+          <a href="/admin">admin</a>
+        </nav>
+      </header>
 <!--Admin table-->
 <section>
   <!--Admin table-->
