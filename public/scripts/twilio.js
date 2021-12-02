@@ -13,26 +13,26 @@ const user = {
   cost: '$20'
 }
 
-  const orderConfirmed = function () {
-    client.messages
-      .create({
-        body: `Hello, thank you for your order! You will receive an update closer to your pickup time.`,
-        from: process.env.TWILIO_PHONE,
-        to: process.env.TO_PHONE
-      })
-      .then(message => console.log(message.sid));
-      document.getElementById('confirm').addEventListener('click', orderConfirmed)
-  }
-
-  const timeConfirmed = function (time_est) {
-    client.messages
+ orderConfirmed = function () {
+  client.messages
     .create({
-      body: `Your order will be ready in approximately ${time_est} minutes.`,
+      body: `Hello, thank you for your order! You will receive an update closer to your pickup time.`,
       from: process.env.TWILIO_PHONE,
       to: process.env.TO_PHONE
     })
     .then(message => console.log(message.sid));
-  }
+    document.getElementById('confirm.btn btn-primary').addEventListener('click', orderConfirmed)
+};
+
+const timeConfirmed = function (time_est) {
+  client.messages
+  .create({
+    body: `Your order will be ready in approximately ${time_est} minutes.`,
+    from: process.env.TWILIO_PHONE,
+    to: process.env.TO_PHONE
+  })
+  .then(message => console.log(message.sid));
+}
 
   const orderCompleted = function () {
     client.messages
@@ -45,7 +45,3 @@ const user = {
   }
 
 
-
-
-  orderConfirmed();
-  module.exports = { orderConfirmed, timeConfirmed, orderCompleted };

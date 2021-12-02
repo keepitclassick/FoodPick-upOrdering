@@ -22,7 +22,11 @@ function ready() {
     for (let i = 0; i < addToCartButtons.length; i++) {
         let button = addToCartButtons[i]
         button.addEventListener('click', addToCartClicked)
+        if (i >= 10) {
+          button.removeEventListener('click', addToCartClicked)
+        }
     }
+
 
     document.getElementsByClassName('btn-purchase')[0].addEventListener('click', purchaseClicked)
 }

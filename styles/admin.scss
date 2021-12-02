@@ -1,3 +1,7 @@
+section{
+  padding: 30%;
+}
+
 div.blueTable {
   border: 1px solid #6E72A4;
   background-color: #EEEEEE;
@@ -61,7 +65,9 @@ div.blueTable {
 .blueTable.outerTableFooter .tableFootStyle {
   padding: 3px 5px;
 }
-/* DivTable.com */
+
+
+
 .divTable{ display: table; }
 .divTableRow { display: table-row; }
 .divTableHeading { display: table-header-group;}
