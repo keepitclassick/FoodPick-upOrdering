@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <title>Menu</title>
+  <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
+  <link rel="stylesheet" href="/vendor/border-box.css" type="text/css" />
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.4.1/lux/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+
+  <script type="text/javascript" src="/vendor/jquery-3.0.0.js"></script>
+  <script type="text/javascript" src="/scripts/shoppingcart.js"></script>
+  <script type="text/javascript" src="/scripts/app.js"></script>
+</head>
+
+<body>
+  <div class="porson-wrapper">
+
+    <%- include('./partials/_header') %>
+
+    <div class="items-wrapper">
+      <% for(let i=0; i < templateVars.length; i++) { %>
+      <div data-prodid="<%= templateVars[i].id %>" data-prodname="<%= templateVars[i].product_name %>"
+        data-description="<%= templateVars[i].description %>" data-price="<%= templateVars[i].price %>" class="card"
+        style="height: 34rem; width: 18rem; float: left; margin-left: 20px;">
+        <img id="cupcake" src="<%= templateVars[i].picture_url %>" class="card-img-top">
+        <div class="card-body">
+          <h5 class="card-title"><%= templateVars[i].name %></h5>
+        </div>
+        <a href="#" class="btn btn-primary add-to-cart">Add to order</a>
+      </div>
+      <% } %>
+    </div>
+</body>
+
+</html>

@@ -1,171 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sweet Treats Cupcakery</title>
 
-   <!-- font awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-    <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
-    <link rel="stylesheet" href="/vendor/border-box.css" type="text/css" />
-    <link rel="stylesheet" href="/styles/main.css" type="text/css" />
-    <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+<head>
+  <title>Sweet Treats Cupcakery</title>
 
-    <script type="text/javascript" src="/scripts/cart.js" async></script>
-    <script type="text/javascript" src="/vendor/jquery-3.0.0.js"></script>
-    <script type="text/javascript" src="/scripts/app.js"></script>
-    <script type="text/javascript" src="/scripts/twilio.js"></script>
-  </head>
+  <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
+  <link rel="stylesheet" href="/vendor/border-box.css" type="text/css" />
 
-  <body>
-    <!-- header section starts  -->
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.4.1/lux/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
 
-    <header>
-      <a href="#home" class="logo"><i class="fas fa-utensils"></i>Sweet Treats Cupcakery</a>
+  <script type="text/javascript" src="/vendor/jquery-3.0.0.js"></script>
+  <script type="text/javascript" src="/scripts/shoppingcart.js"></script>
+  <script type="text/javascript" src="/scripts/app.js"></script>
 
-      <div id="menu-bar" class="fas fa-bars"></div>
+</head>
 
-      <nav class="navbar">
-        <a href="#home">home</a>
-        <a href="#gallery">menu</a>
-        <a href="#order">order</a>
-      </nav>
-    </header>
+<body>
+  <%- include('./partials/_header'); %>
+  <div class="entrance">
+    <img id="cakes" src="/images/cupcake-shop-interior.jpeg">
+    <div class="order-btn">
+      <p class="lead">
+        <a class="btn btn-primary btn-lg" href="/menu" role="button">Order</a>
+      </p>
+    </div>
+  </div>
 
-    <!-- header section ends -->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src=“https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js”
+    integrity=“sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1”
+    crossorigin=“anonymous”></script>
+  <script src=“https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js”
+    integrity=“sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM”
+    crossorigin=“anonymous”></script>
 
-    <!-- home section starts  -->
-
-    <section class="home" id="home">
-      <div class="content">
-        <h3>Cupcakes made fresh daily</h3>
-        <p>Fun and whimsical cupcakes to brighten anyones day!</p>
-        <a href="#gallery" class="btn">order now</a>
-      </div>
-
-      <div class="image">
-        <img src="./images/Roses-are-red-violets-are-blue-mini-cupcakes-scaled.jpeg" alt="" />
-      </div>
-    </section>
-
-    <!-- home section ends -->
-
-    <!-- gallery section starts  -->
-
-    <section class="gallery" id="gallery">
-      <h1 class="heading">our<span> Menu </span></h1>
-
-      <div class="box-container">
-        <div class="box">
-          <img class="shop-item-image" src="./images/Peanut-Butter-and-Jelly-Cupcakes-4.jpeg" alt="" />
-            <div class="content">
-              <h3 class = "shop-item-title" >Nutella-PB</h3>
-              <span class="shop-item-price">$8.00</span>
-              <p>A delicious dessert made with a Nutella icing and peanut butter filling.</p>
-              <a href="#order" class="btn">add to cart</a>
-            </div>
-        </div>
-        <div class="box">
-          <img class="shop-item-image" src="./images/chocolate-covered-strawberry-cupcakes-3.jpeg" alt="" />
-            <div id="pb" class="content">
-              <h3 class = "shop-item-title">Chocolate Strawberry</h3>
-              <span class="shop-item-price">$10.00</span>
-              <p>A chocolate cupcake topped with a strawberry icing and a freshly sliced fruit.</p>
-              <a href="#order" class="btn">add to cart</a>
-            </div>
-        </div>
-        <div class="box">
-          <img class="shop-item-image" src="./images/0220cherrycupcakes511B5226post-706x1024.jpeg" alt="" />
-          <div id="raz" class="content">
-            <h3 class = "shop-item-title">Raspberry Pie</h3>
-            <span class="shop-item-price">$11.00</span>
-            <p>A lemon flavoured batter stuffed with sweet rasberry filling and a vanilla icing.</p>
-            <a href="#order" class="btn">add to cart</a>
-          </div>
-        </div>
-        <div class="box">
-          <img  class="shop-item-image" src="./images/Maple-Carrot-Cupcakes_EXPS_HPLBZ18_12307_C05_17_1b-2.jpeg" alt="" />
-          <div id="raisin" class="content">
-            <h3 class = "shop-item-title">Sweet Raisin Bran</h3>
-            <span class="shop-item-price">$10.00</span>
-            <p>A healthier option made with a raisin bran batter and a naturally sweetened icing.</p>
-            <a href="#order" class="btn">add to cart</a>
-          </div>
-        </div>
-        <div class="box">
-          <img class="shop-item-image" src="./images/Vanilla Sprinkle.jpeg" alt="" />
-          <div id="van"class="content">
-            <h3 class = "shop-item-title">Fiesta</h3>
-            <span class="shop-item-price">$7.00</span>
-            <p>A vanilla cupcake topped with swirled icing and rainbow sprinkles.</p>
-            <a href="#order" class="btn">add to cart</a>
-          </div>
-        </div>
-        <div class="box">
-          <img  class="shop-item-image" src="./images/pinata-cupcakes-1.jpeg" alt="" />
-          <div id="pinata" class="content">
-            <h3 class = "shop-item-title" >Pinata</h3>
-            <span class="shop-item-price">$5.00</span>
-            <p>Similar to fiesta, except stuffed with rainbow pop rock candy as a bonus!</p>
-            <a href="#order" class="btn">add to cart</a>
-          </div>
-        </div>
-        <div class="box">
-          <img class="shop-item-image" src="./images/Smores-Cupcakes_730px-4.jpg.webp" alt="" />
-          <div id="smore" class="content">
-            <h3 class = "shop-item-title">Triple Chocolate</h3>
-            <span class="shop-item-price">$7.00</span>
-            <p>A choclate batter stuffed with melted chocolate and white chocolate icing.</p>
-            <a href="#order" class="btn">add to cart</a>
-          </div>
-        </div>
-        <div class="box">
-          <img class="shop-item-image" src="./images/mickey-cupcakes-resize-5.jpeg" alt="" />
-          <div id="mickey"class="content">
-            <h3 class = "shop-item-title">Mickey Cupcakes</h3>
-            <span class="shop-item-price">$10.00</span>
-            <p>A dark chocolate cupcake with vanilla icing and Oreo ears.</p>
-            <a href="#order" class="btn">add to cart</a>
-          </div>
-        </div>
-        <div class="box">
-          <img  class="shop-item-image" src="./images/Dancing-Queen-Cupcakes.jpeg" alt="" />
-          <div id="rainbow" class="content">
-            <h3 class = "shop-item-title">Rainbow Cupcakes</h3>
-              <span class="shop-item-price">$12.99</span>
-              <p>We flavoured this cupcake with Lucky Charms and coloured it with melted rainbow sprinkles!</p>
-              <a href="#order" class="btn">add to cart</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- gallery section ends -->
-
-    <!-- order section starts  -->
-
-    <h1 class="heading" id = "order"> <span>order</span> now </h1>
-
-    <section class="container content-section">
-      <h1 class="section-header">CART</h1>
-      <div class="cart-row">
-        <span class="cart-item cart-header cart-column">ITEM</span>
-        <span class="cart-price cart-header cart-column">PRICE</span>
-        <span class="cart-quantity cart-header cart-column">QUANTITY</span>
-      </div>
-      <div class="cart-items">
-
-      </div>
-      <div class="cart-total">
-        <strong class="cart-total-title">Total</strong>
-        <span class="cart-total-price">$0</span>
-      </div>
-      <button class="btn btn-primary btn-purchase" type="button" method="POST" action="Time" >PURCHASE</button>
-    </section>
-
-    <!-- order section ends -->
-
-  </body>
-
+ </body>
 </html>

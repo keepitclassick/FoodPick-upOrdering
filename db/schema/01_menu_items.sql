@@ -9,3 +9,5 @@ CREATE TABLE menu_items (
   description TEXT NOT NULL,
   in_stock BOOLEAN NOT NULL DEFAULT TRUE
 );
+
+
