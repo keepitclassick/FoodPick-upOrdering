@@ -17,7 +17,19 @@
     <script type="text/javascript" src="/scripts/app.js"></script>
     <script type="text/javascript" src="/scripts/twilio.js"></script>
   </head>
+<style>
+.h1 {
+  display:flex;
+  padding-top: 800px;
+}
 
+.pw {
+  display: flex;
+  margin-top: -40px;
+  margin-left: 75px;
+  color: black;
+}
+</style>
   <body>
     <!-- header section starts  -->
 
@@ -165,10 +177,10 @@
       <button class="btn btn-primary btn-purchase" type="button" method="POST" action="Time" >PURCHASE</button>
     </section>
 
-    <h1>Admin</h1>
-<form action="/admin">
+    <h1 class= "h1">Admin</h1>
+<form action="/admin" class="pw">
   <label for="pwd">Password:</label>
-  <input type="password" id="pwd" name="pwd" required><br><br>
+  <input type="password" name="pwd" required><br><br>
   <input type="submit">
 </form>
 
@@ -180,4 +192,3 @@
   </body>
 
 </html>
-
