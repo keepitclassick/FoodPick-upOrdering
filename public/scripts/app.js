@@ -65,7 +65,6 @@ $(() => {
   })
 
   $('#place-order').click(function () {
-    console.log('hi')
     $.ajax({
       method: "GET",
       url: "/cart/order",
