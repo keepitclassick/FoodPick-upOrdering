@@ -27,7 +27,7 @@ function showCart() {
         <div class="row">
           <div class="col-sm-10">
             <h4 class="product-name">${item.name}</h4>
-            <p class="product-description">${item.description}</p>
+            <p class="product-description">${item.name}</p>
           </div>
         </div>
       </td>
