@@ -30,6 +30,7 @@
         <a href="#home">home</a>
         <a href="#gallery">menu</a>
         <a href="#order">order</a>
+        <a href="/admin"><div id="popup">
       </nav>
     </header>
 
@@ -135,7 +136,7 @@
             <h3 class = "shop-item-title">Rainbow Cupcakes</h3>
               <span class="shop-item-price">$12.99</span>
               <p>We flavoured this cupcake with Lucky Charms and coloured it with melted rainbow sprinkles!</p>
-              <a href="#order" class="btn">add to cart</a>
+              <a href="#order" href="admin" class="btn">add to cart</a>
           </div>
         </div>
       </div>
@@ -164,8 +165,19 @@
       <button class="btn btn-primary btn-purchase" type="button" method="POST" action="Time" >PURCHASE</button>
     </section>
 
+    <h1>Admin</h1>
+<form action="/admin">
+  <label for="pwd">Password:</label>
+  <input type="password" id="pwd" name="pwd" required><br><br>
+  <input type="submit">
+</form>
+
+</body>
+</html>>
+
     <!-- order section ends -->
 
   </body>
 
 </html>
+
